@@ -1,11 +1,12 @@
-// 1. ADIM: Firebase config kodlarınızı BURAYA YAPIŞTIRIN
 const firebaseConfig = {
-    apiKey: "...",
-    authDomain: "...",
-    projectId: "...",
-    storageBucket: "...",
-    messagingSenderId: "...",
-    appId: "..."
+  apiKey: "AIzaSyAru3d8lhdt8usX0diKQ9kJVihBYGmQzGI",
+  authDomain: "sorucevap-c9709.firebaseapp.com",
+  databaseURL: "https://sorucevap-c9709-default-rtdb.firebaseio.com",
+  projectId: "sorucevap-c9709",
+  storageBucket: "sorucevap-c9709.firebasestorage.app",
+  messagingSenderId: "102653070629",
+  appId: "1:102653070629:web:2148b7863aa0006db45ecc",
+  measurementId: "G-MR06QT5TNC"
 };
 
 // Firebase'i başlat
