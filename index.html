@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atölye Dünyası - Etkinliklerimiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🎨 Atölye Dünyasına Hoş Geldiniz! 🔬</h1>
+        <p style="text-align: center; font-size: 1.2rem;">6-12 yaş arası minik kaşifler için harika etkinlikler burada!</p>
+        
+        <div class="etkinlik-listesi" id="etkinlikListesi">
+            <p style="text-align: center; color: #555;">Etkinlikler yükleniyor...</p>
+        </div>
+    </div>
+
+    <div id="kayitModal" class="modal">
+        <div class="modal-icerik">
+            <span class="kapat">&times;</span>
+            <h2>Etkinliğe Kayıt Ol</h2>
+            <h3 id="modalEtkinlikAdi"></h3>
+            <form id="kayitFormu">
+                <div class="form-grup">
+                    <label for="veliAdi">Veli Adı Soyadı:</label>
+                    <input type="text" id="veliAdi" required>
+                </div>
+                <div class="form-grup">
+                    <label for="ogrenciAdi">Öğrenci Adı Soyadı:</label>
+                    <input type="text" id="ogrenciAdi" required>
+                </div>
+                <div class="form-grup">
+                    <label for="telefon">Telefon Numarası:</label>
+                    <input type="text" id="telefon" placeholder="05XX XXX XX XX" required>
+                </div>
+                <input type="hidden" id="modalEtkinlikId">
+                <button type="submit" class="btn btn-gonder">Kaydı Tamamla</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    
+    <script src="app.js"></script>
+</body>
+</html>
