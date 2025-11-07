@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Paneli - Atölye Dünyası</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🔑 Atölye Dünyası - Admin Paneli</h1>
+        
+        <div class="admin-panel">
+            
+            <div class="admin-form">
+                <h2 id="formBasligi">Yeni Etkinlik Oluştur</h2>
+                <form id="etkinlikFormu">
+                    <div class="form-grup">
+                        <label for="etkinlikAdi">Etkinlik Adı:</label>
+                        <input type="text" id="etkinlikAdi" required>
+                    </div>
+                    <div class="form-grup">
+                        <label for="etkinlikTarihi">Tarih:</label>
+                        <input type="date" id="etkinlikTarihi" required>
+                    </div>
+                    <div class="form-grup">
+                        <label for="etkinlikSaati">Saat:</label>
+                        <input type="time" id="etkinlikSaati" required>
+                    </div>
+                    <div class="form-grup">
+                        <label for="etkinlikGorsel">Görsel URL'si:</label>
+                        <input type="text" id="etkinlikGorsel" placeholder="https://..." required>
+                    </div>
+                    <div class="form-grup">
+                        <label for="etkinlikAciklama">Açıklama:</label>
+                        <textarea id="etkinlikAciklama" rows="4"></textarea>
+                    </div>
+                    
+                    <input type="hidden" id="guncellenenEtkinlikId">
+                    
+                    <button type="submit" class="btn btn-gonder" id="formButonu">Etkinliği Yayınla</button>
+                    <button type="button" class="btn btn-ikon btn-sil" id="formIptalButonu" style="display: none; margin-top: 10px;">İptal</button>
+                </form>
+            </div>
+
+            <div class="admin-katilimcilar">
+                <h2>Etkinlik Katılımcıları</h2>
+                <div id="katilimciRaporu">
+                    <p>Katılımcı raporu yükleniyor...</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    
+    <script src="admin.js"></script>
+</body>
+</html>
