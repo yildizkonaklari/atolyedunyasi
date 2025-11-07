@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #f0f8ff; 
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+h1, h2 {
+    color: #ff6347;
+    text-align: center;
+}
+h3 {
+     color: #007bff;
+     margin: 0;
+}
+.btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* --- Veli Sayfası Stilleri --- */
+.etkinlik-listesi {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+.etkinlik-karti {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.etkinlik-karti:hover {
+    transform: translateY(-5px);
+}
+.etkinlik-gorsel {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.etkinlik-bilgi {
+    padding: 20px;
+}
+.etkinlik-bilgi h3 {
+    text-align: left;
+    margin-top: 0;
+}
+.etkinlik-bilgi p {
+    font-size: 0.95rem;
+    color: #555;
+}
+.etkinlik-tarih {
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+.btn-katil {
+    background-color: #ffc107;
+    color: #333;
+}
+.btn-katil:hover {
+    background-color: #e0a800;
+}
+
+/* --- Kayıt Modalı (Popup) --- */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+.modal-icerik {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+.kapat {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* --- Admin Paneli Stilleri --- */
+.admin-panel {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+@media (min-width: 900px) {
+    .admin-panel {
+        grid-template-columns: 1fr 2fr; 
+    }
+}
+.admin-form, .admin-katilimcilar {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.admin-form h2, .admin-katilimcilar h2 {
+    text-align: left;
+    margin-top: 0;
+}
+.form-grup {
+    margin-bottom: 15px;
+}
+.form-grup label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+.form-grup input[type="text"],
+.form-grup input[type="date"],
+.form-grup input[type="time"],
+.form-grup textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+.btn-gonder {
+    background-color: #28a745;
+    color: white;
+}
+.btn-gonder:hover {
+    background-color: #218838;
+}
+
+/* Katılımcı Listesi */
+.katilimci-etkinlik-grubu {
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f0f8ff;
+    padding-bottom: 15px;
+}
+.katilimci-etkinlik-grubu:last-child {
+    border-bottom: none;
+}
+.etkinlik-baslik-konteyner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ffc107;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    flex-wrap: wrap; 
+    gap: 10px;
+}
+.etkinlik-butonlar {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+.btn-ikon {
+     padding: 6px 12px;
+     border: none;
+     border-radius: 6px;
+     font-size: 0.85rem;
+     font-weight: bold;
+     cursor: pointer;
+     font-family: 'Nunito', sans-serif;
+     transition: transform 0.2s;
+}
+.btn-ikon:hover {
+    transform: scale(1.05);
+}
+.btn-duzenle {
+    background-color: #ffc107;
+    color: #333;
+}
+.btn-sil {
+    background-color: #dc3545;
+    color: white;
+}
+.katilimci-listesi {
+    padding-left: 0;
+    margin: 0;
+}
+.katilimci-listesi li {
+    list-style-type: none;
+    background: #fdfdfd;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    border: 1px solid #eee;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    gap: 10px;
+}
+.katilimci-listesi li span {
+    color: #555;
+}
+.katilimci-listesi li strong {
+    color: #333;
+}
+.katilimci-listesi li .tel {
+    font-weight: bold;
+    color: #28a745;
+}
+.katilimci-listesi-bos {
+    padding-left: 10px; 
+    font-size: 0.9rem; 
+    color: #777;
+}
